@@ -12,7 +12,7 @@ console.log (produto);
 produto.preco = 3.50;
 console.log (produto);
 
-produto.preco = undefined; // eviite atribuir undefined
+produto.preco = undefined; // evite atribuir undefined
 console.log (!!produto.preco);
 //delete produto.preco
 console.log(produto);
