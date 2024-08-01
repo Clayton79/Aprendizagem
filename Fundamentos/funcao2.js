@@ -1,17 +1,21 @@
-// Armazenando uma função em uma variavel.
-const imprimirSoma = function (a, b) {
+// Função armazenada em uma variável, usando a sintaxe de função anônima
+const imprimirSoma = function(a, b) {
     console.log(a + b);
 };
 
-imprimirSoma (2, 3);
+// Chama a função passando 2 e 3 como argumentos
+imprimirSoma(2, 3); // Esperado: 5 (2 + 3)
 
-// Armazenando uma função arrow em uma variavel.
+// Função arrow com retorno explícito
 const soma = (a, b) => {
     return a + b;
 };
 
-console.log(soma(2, 3));
+// Chama a função passando 2 e 3 como argumentos
+console.log(soma(2, 3)); // Esperado: 5 (2 + 3)
 
-//Retorno implícito
+// Função arrow com retorno implícito
 const subtracao = (a, b) => a - b;
-console.log(subtracao(2, 3));
+
+// Chama a função passando 2 e 3 como argumentos
+console.log(subtracao(2, 3)); // Esperado: -1 (2 - 3)

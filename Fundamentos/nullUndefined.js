@@ -1,22 +1,30 @@
-let valor // não inicializado.
-console.log (valor);
+// Declara uma variável sem inicializar
+let valor;
+console.log(valor); // Exibe 'undefined', pois a variável foi declarada, mas não foi inicializada
 
-valor = null // ausência de valor 
-console.log (valor);
-// console.log (valor.toString()) // Erro !
+// Atribui 'null' à variável, indicando ausência de valor
+valor = null;
+console.log(valor); // Exibe 'null', que é usado para indicar que a variável não possui um valor
 
-const produto = {}
-console.log (produto.preco);
-console.log (produto);
+// Tentativa de chamar um método em 'null', que resultaria em erro se descomentado
+// console.log(valor.toString()); // Erro! 'null' não tem método toString
 
+// Cria um objeto vazio
+const produto = {};
+console.log(produto.preco); // Exibe 'undefined', pois 'preco' ainda não foi definido no objeto
+console.log(produto); // Exibe o objeto vazio '{}'
+
+// Atribui um valor à propriedade 'preco' do objeto
 produto.preco = 3.50;
-console.log (produto);
+console.log(produto); // Exibe o objeto com a propriedade 'preco' definida: '{ preco: 3.5 }'
 
-produto.preco = undefined; // evite atribuir undefined
-console.log (!!produto.preco);
-//delete produto.preco
-console.log(produto);
+// Atribui 'undefined' à propriedade 'preco', o que efetivamente remove o valor da propriedade
+produto.preco = undefined; // Evite atribuir 'undefined' diretamente a propriedades
+console.log(!!produto.preco); // Exibe 'false', pois 'undefined' é falsy
+// delete produto.preco; // Opcional: remove a propriedade 'preco' do objeto
+console.log(produto); // Exibe o objeto sem a propriedade 'preco', se 'delete' for usado
 
-produto.preco = null // sem preço 
-console.log(!!produto.preco);
-console.log(produto);
+// Atribui 'null' à propriedade 'preco', indicando que a propriedade existe, mas não tem valor
+produto.preco = null; // Sem preço
+console.log(!!produto.preco); // Exibe 'false', pois 'null' é falsy
+console.log(produto); // Exibe o objeto com 'preco' definido como 'null': '{ preco: null }'

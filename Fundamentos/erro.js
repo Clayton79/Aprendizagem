@@ -10,15 +10,27 @@ function tratarErroELancar (erro) {
     }
 }
 
+// Função que imprime o nome do objeto em letras maiúsculas, seguido de "!!!"
 function imprimirSomaGritado(obj) {
     try {
-        console.log(obj.name.toUpperCase() + "!!!")
+        // Tenta acessar a propriedade 'name' do objeto e a transforma em maiúsculas, adicionando "!!!"
+        console.log(obj.name.toUpperCase() + "!!!");
     } catch (e) {
-        tratarErroELancar(e)
+        // Se ocorrer um erro, chama a função tratarErroELancar passando o erro
+        tratarErroELancar(e);
     } finally {
-        console.log("final")
+        // Este bloco sempre é executado, independentemente de ocorrer um erro ou não
+        console.log("final");
     }
 }
 
-const obj = {nome: "Roberto"}
-imprimirNomeGritado(obj)
+// Função fictícia para tratar e lançar o erro
+function tratarErroELancar(e) {
+    console.log("Ocorreu um erro:", e.message);
+}
+
+// Objeto com a propriedade 'nome' (não é 'name')
+const obj = { nome: "Roberto" };
+
+// Chama a função passando o objeto
+imprimirSomaGritado(obj); // Esperado: erro porque a propriedade 'name' não existe no objeto
