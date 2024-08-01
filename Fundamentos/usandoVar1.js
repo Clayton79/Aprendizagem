@@ -31,4 +31,4 @@ teste();
 // Tentar acessar 'local' fora da função resulta em um erro,
 // porque 'local' não está definida no escopo global.
 // Isso causará um ReferenceError.
-console.log(local);
+console.log(local); 
