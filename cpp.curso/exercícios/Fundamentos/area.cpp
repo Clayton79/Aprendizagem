@@ -10,7 +10,7 @@ int main () {
     cin >> radius;
     
     double area = PI * radius * radius;
-    cout << "Area is: " << area ;
+    cout << "Area is: " << area;
 
     return 0;
 }
