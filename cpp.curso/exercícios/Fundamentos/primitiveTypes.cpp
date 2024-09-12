@@ -31,5 +31,15 @@ int main () {
     long long int n4 = 1;
     cout << n1 + n2 + n3 + n4 << endl;
 
+    cout << sizeof(char) << "byte" << endl; 
+    cout << sizeof(char16_t) << "byte" << endl; 
+    cout << sizeof(char32_t) << "byte" << endl; 
+    cout << sizeof(wchar_t) << "byte" << endl; 
+    cout << sizeof(int) << "byte" << endl; 
+    cout << sizeof(long int) << "byte" << endl; 
+    cout << sizeof(long long int) << "byte" << endl; 
+    cout << sizeof(float) << "byte" << endl; 
+    cout << sizeof(double) << "byte" << endl; 
+
     return 0;
 }
