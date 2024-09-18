@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
- // 3 numeros usuarios 60 30 140 solicitar
+
 int main () {
 
     int Num1,Num2,Num3;
