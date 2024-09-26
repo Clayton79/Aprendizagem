@@ -1,0 +1,36 @@
+CREATE DATABASE Biblioteca;
+
+CREATE TABLE Leitor (
+    ID_Leitor INT AUTO_INCREMENT PRIMARY KEY,
+    CPF VARCHAR(25) NOT NULL UNIQUE,
+    Nome VARCHAR(255) NOT NULL,
+    Telefone VARCHAR(20) NOT NULL,
+    Email VARCHAR(50)
+);
+
+CREATE TABLE Livro (
+    ID_Livro INT AUTO_INCREMENT PRIMARY KEY,
+    Codigo_de_ISBN VARCHAR(255) NOT NULL UNIQUE,
+    Autor VARCHAR(100),
+    Editora VARCHAR(100),
+    Ano_de_Publicação INT
+);
+
+CREATE TABLE Emprestimo (
+    ID_Emprestimo INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Leitor INT,
+    ID_Livro INT,
+    Data_Prevista DATE,
+    Data_da_Devolução DATE,
+    FOREIGN KEY ID_Leitor REFERENCES Leitor(ID_Leitor) ON DELETE CASCADE,
+    FOREIGN KEY ID_Livro REFERENCES Livro (ID_Livro) ON DELETE CASCADE
+);
+
+CREATE TABLE Endereco (
+    ID_Endereco INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Leitor INT,
+    Rua VARCHAR(150) NOT NULL,
+    Cep VARCHAR(50) NOT NULL,
+    Bairro VARCHAR(255)NOT NULL,
+    FOREIGN KEY ID_Leitor REFERENCES Leitor(ID_Leitor) ON DELETE CASCADE
+);
