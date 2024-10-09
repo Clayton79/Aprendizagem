@@ -6,3 +6,6 @@ http.createServer((req, res) => {
         res.write("Bom dia!");
         res.end();
 }).listen(8000);
+
+const c = require("./pastaC/index");
+console.log(c.ola);
