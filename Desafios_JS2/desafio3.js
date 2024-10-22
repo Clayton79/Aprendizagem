@@ -1,5 +1,7 @@
-const calcularSalario = function (hora, salario) {
-    return console.log(`Salario igual a R$${hora * salario} !`);
-}
+function calcularSalarioLiquido(horasTrabalhadas, ganhoPorHora) {
+    const salarioBruto = horasTrabalhadas * ganhoPorHora;
+    const salarioLiquido = salarioBruto - salarioBruto * 30/100;
 
-calcularSalario(125, 12.5);
+    return console.log(`Salário igual a R$ ${salarioLiquido}`);
+    }
+calcularSalarioLiquido(180, 60);
